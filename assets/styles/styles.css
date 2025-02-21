@@ -9,6 +9,7 @@
 
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 #title {
@@ -16,8 +17,78 @@ body {
     color: var(--white);
 }
 
+#titleLink {
+    text-decoration: none;
+    
+}
+
 header {
-    background-color: var(--gray);
+    background-color: var(--dark);
     width: 100%;
     padding: 5px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#unionJack {
+   height: 40px;
+    
+}
+#headerLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+nav {
+    margin-right: 60px;
+}
+
+li {
+    display: inline;
+}
+.navLink {
+    color: var(--white);
+    font-family: "Raleway", serif;
+    font-size: 1.15rem;
+    transition: 300ms ease;
+    padding-right: 40px;
+}
+.navLink:hover {
+    color: var(--red);
+}
+
+#mobileButton {
+    display: none;
+}
+
+#hamburger {
+    width: 50px;
+}
+
+@media (max-width: 1022px) {
+    #links {
+        display: none;
+    }
+    #mobileButton {
+        display: block;
+    }
+}
+
+@media (max-width: 553px) {
+    #unionJack {
+        display: none;
+    }
+    header {
+        padding: 5px 20px;
+    }
+    #hamburger {
+        width: 30px;
+        padding: 0;
+    }
+    #title {
+        font-size: 1.5rem;
+    }
 }
