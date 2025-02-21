@@ -1,0 +1,23 @@
+:root {
+    --dark : #2b2d42;
+    --gray : #8d99ae;
+    --white : #edf2f4;
+    --red : #ef233c;
+    --bright : #d90429;
+    
+}
+
+body {
+    margin: 0;
+}
+
+#title {
+    font-family: "Raleway", serif;
+    color: var(--white);
+}
+
+header {
+    background-color: var(--gray);
+    width: 100%;
+    padding: 5px 40px;
+}
