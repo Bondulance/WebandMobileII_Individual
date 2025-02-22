@@ -7,15 +7,25 @@
     
 }
 
-body {
+html, body {
+    height: 100%;
     margin: 0;
+    display: flex;
     overflow-x: hidden;
+    flex-direction: column;
 }
 
 #title {
     font-family: "Raleway", serif;
     color: var(--white);
 }
+#footerTitle {
+    font-family: "Raleway", serif;
+    color: var(--white);
+    font-size: 1.25rem;
+}
+
+
 
 #titleLink {
     text-decoration: none;
@@ -75,13 +85,14 @@ main { margin-top: 40px;
 }
 
 #poster {
-    background: var(--gray);
-    width: 70%;
+    background: var(--white);
+    width: 80%;
     padding: 5px 30px;
+    padding-bottom: 40px;
 }
 
 h2 {
-    color: var(--white);
+    color: var(--gray);
     font-family: "Raleway",serif;
     font-size: 1.8rem;
 }
@@ -89,6 +100,75 @@ h2 {
 hr {
     
     border: 1px solid var(--bright);
+    margin-bottom: 40px;
+}
+
+#left {
+    width: 60%;
+    font-family: "Raleway", serif;
+    font-size: 1.2rem;
+}
+#right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#splitContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#londonPhoto {
+    width: 80%;
+    border: 1px solid var(--dark);
+}
+
+.connector {
+    color: var(--red);
+    font-weight: 600;
+    transition: 300ms ease;
+}
+.connector:hover {
+    color: var(--dark);
+}
+
+footer {
+    background: var(--dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    margin-top: 100px;
+    position: fixed;
+    bottom: 0;
+}
+
+#mobileImg {
+    display: none;
+}
+
+#footerLeft {
+    display: flex;
+    align-items: center;
+    
+    padding: 0px 20px;
+}
+#footerLeft > div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+#left-border {
+    border-left: 1px solid var(--white);
+    height: 100px;
+}
+#unionJackfooter {
+    height: 30px;
 }
 
 @media (max-width: 1022px) {
@@ -113,5 +193,40 @@ hr {
     }
     #title {
         font-size: 1.5rem;
+    }
+}
+
+@media (max-width:1471px) {
+    #londonPhoto {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1224px) {
+    #splitContainer {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    #londonPhoto {
+        width: 80%;
+    }
+    #poster {
+
+        padding: 5px 10px;
+        
+    }
+    #left {
+        width: 80%;
+       
+    }
+    h2 {
+        text-align: center;
+    }
+    #mobileImg {
+        display: block;
+    }
+    #right {
+        display: none;
     }
 }
