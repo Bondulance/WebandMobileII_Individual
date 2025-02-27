@@ -58,6 +58,19 @@ html, body {
 }
 
 
+#footerRight {
+    display: flex;
+    gap: 20px;
+    margin-right: 100px;
+    width: 50%;
+}
+
+#flex {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 header {
     background-color: var(--dark);
     width: 100%;
@@ -103,6 +116,10 @@ li {
 
 #hamburger {
     width: 50px;
+}
+
+.footerLink:hover {
+    color: var(--bright);
 }
 
 main { margin-top: 40px; 
@@ -197,6 +214,23 @@ footer {
     height: 30px;
 }
 
+.footerLink {
+    color: white;
+    font-family: "Raleway", serif;
+    transition: 300ms ease;
+}
+
+#HISTORY { grid-area: row1; }
+#LOCATION { grid-area: row1; }
+#CULTURE { grid-area: row1; }
+#ACTIVITIES { grid-area: row1; }
+#TRAVELING { grid-area: row1; }
+#WAR { grid-area: row2; }
+#ARCHITECTURE { grid-area: row2; }
+#FOOD { grid-area: row2; }
+#MONUMENTS { grid-area: row3; }
+#NATURE { grid-area: row3; }
+
 @media (max-width: 1022px) {
     #links {
         display: none;
@@ -204,6 +238,9 @@ footer {
     #mobileButton {
         display: block;
     }
+    /* #flex {
+        flex-direction: column;
+    } */
 }
 
 @media (max-width: 553px) {
