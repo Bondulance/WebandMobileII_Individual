@@ -126,6 +126,7 @@ main { margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 #poster {
@@ -133,6 +134,10 @@ main { margin-top: 40px;
     width: 80%;
     padding: 5px 30px;
     padding-bottom: 40px;
+}
+
+#alt {
+    text-align: center;
 }
 
 h2 {
@@ -158,11 +163,29 @@ hr {
     align-items: center;
 }
 
+dt {
+    font-weight: bold;
+    transition: 300ms ease;
+}
+
+span {
+    font-weight: 600;
+    color: var(--dark);
+}
+
 #splitContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+#splitContainerAlt {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-direction: column;
+}
+
 
 #londonPhoto {
     width: 80%;
@@ -187,6 +210,18 @@ footer {
     padding: 20px 20px;
     margin-top: 100px;
     
+}
+
+.cardLink {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: var(--gray);
+    color: var(--white);
+    font-family: "Raleway", serif;
+    transition: 300ms ease;
+}
+.cardLink:hover {
+    color: var(--dark);
 }
 
 #mobileImg {
@@ -219,6 +254,99 @@ footer {
     font-family: "Raleway", serif;
     transition: 300ms ease;
 }
+
+#lower {
+    margin-top: 20px;
+    width: 80%;
+    padding: 5px 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+#bigben {
+    width: 30%;
+}
+
+#leftAlt {
+    width: 60%;
+    font-family: "Raleway", serif;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.card {
+    border: solid 1px black;
+    background-color: var(--dark);
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 320px;
+}
+.imgCard {
+    width: 250px;
+    padding: 10px;
+}
+
+h3 {
+    color: var(--white);
+    font-family: "Raleway", serif;
+    font-size: 1.5rem;
+}
+#wrapper {
+    display: flex;
+    gap: 20px;
+    flex-wrap: 1;
+}
+#mapContainer {
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    background: var(--dark);
+}
+
+#inside {
+    margin: 20px;
+    font-family: "Raleway", serif;
+    color: var(--white);
+}
+
+#mapImage {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    padding: 20px;
+    background: var(--gray);
+}
+#mapImage > img {
+    width: 100%;
+    box-shadow: 3px 3px 3px 0px black;
+}
+
+#opt1:hover {
+    color: var(--bright);
+}
+
+#opt2:hover {
+    color: #2ac2f3;
+}
+
+#opt3:hover {
+    color: #f3932a;
+}
+
+#opt4:hover {
+    color: #a42af3;
+}
+
+
 
 #HISTORY { grid-area: row1; }
 #LOCATION { grid-area: row1; }
@@ -257,11 +385,37 @@ footer {
     #title {
         font-size: 1.5rem;
     }
+    .card {
+        max-width: 160px;
+    }
+    .imgCard {
+        width: 60%;
+        padding: 10px;
+    }
+    #mapContainer {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    mapImage > img {
+        width: 400px;
+    }
+    #bigben {
+        width: 100%;
+    }
+    .imgCard {
+        width: 70%;
+    }
+    
 }
 
 @media (max-width:1471px) {
     #londonPhoto {
         width: 90%;
+    }
+    #lower {
+        flex-direction: column;
     }
 }
 
@@ -277,7 +431,7 @@ footer {
     #poster {
 
         padding: 5px 10px;
-        
+      
     }
     #left {
         width: 80%;
@@ -292,4 +446,5 @@ footer {
     #right {
         display: none;
     }
+    
 }
