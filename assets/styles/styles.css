@@ -18,7 +18,7 @@ body {
 }
 
 #title {
-    /*Raleway will be my main and only font, just different weights will be used*/
+  /*Raleway will be my main and only font, just different weights will be used*/
   font-family: "Raleway", serif;
   color: var(--white);
 }
@@ -29,7 +29,7 @@ body {
 }
 
 #container {
-    /*Priority to flex over grid on this project*/
+  /*Priority to flex over grid on this project*/
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@ body {
 }
 
 .titleLink {
-    /* Title button will be a link to Homepage, I just dont want an underline on the text. Cursor will still be a pointer to indicate however.*/
+  /* Title button will be a link to Homepage, I just dont want an underline on the text. Cursor will still be a pointer to indicate however.*/
   text-decoration: none;
 }
 
@@ -100,9 +100,18 @@ nav {
 }
 
 li {
-    /* Inline is used here as I wanted my List items to be displayed in a row, not in a column */
+  /* Inline is used here as I wanted my List items to be displayed in a row, not in a column */
   display: inline;
 }
+
+dl {
+  gap: 10px;
+}
+dd {
+  padding: 10px 0px;
+  font-family: "Raleway", serif;
+}
+
 .navLink {
   color: var(--white);
   font-family: "Raleway", serif;
@@ -115,12 +124,16 @@ li {
 }
 
 #mobileButton {
-/* Displays none by default to only show on mobile screens */
+  /* Displays none by default to only show on mobile screens */
   display: none;
+  background: none;
+  border: none;
 }
 
 #hamburger {
   width: 50px;
+  background: none;
+  border: none;
 }
 
 .footerLink:hover {
@@ -195,13 +208,13 @@ span {
 .londonPhoto {
   width: 500px;
   border: 1px solid var(--dark);
- object-fit: cover;
+  object-fit: cover;
 }
 
 .planeImg {
-    width: 500px;
-    border: 1px solid var(--dark);
-   object-fit: cover;
+  width: 500px;
+  border: 1px solid var(--dark);
+  object-fit: cover;
 }
 
 .connector {
@@ -276,6 +289,14 @@ footer {
   align-items: center;
 }
 
+#map {
+  transition: 300ms ease;
+}
+
+#map:hover {
+  width: 300px;
+}
+
 .bigben {
   width: 30%;
 }
@@ -289,48 +310,46 @@ footer {
 
 /*This is my css for the hamburger menu*/
 #hamburgerMenu {
-    position: absolute;
-    z-index: 100;
-    background: var(--dark);
-    border: 1px solid var(--white);
-    display: none;
-    right: 0;
-    
+  position: absolute;
+  z-index: 100;
+  background: var(--dark);
+  border: 1px solid var(--white);
+  display: none;
+  right: 0;
 }
 #hamburgerMenu > ul {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 #hamburgerMenu > ul > li {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
 #close {
-    background: none;
-    border: none;
-    color: var(--white);
-    font-size: 1.5rem;
-    font-weight: 600;
-    top: 0;
-    position: absolute;
-    right: 0;
-    cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 600;
+  top: 0;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
 }
 
 /* CSS for carousel buttons */
 .carousel {
-    background: #FFF;
-    border: 1px solid;
-    border-radius: 100%;
-    height: 20px;
-    width: 20px;
+  background: #fff;
+  border: 1px solid;
+  border-radius: 100%;
+  height: 20px;
+  width: 20px;
 }
 .carousel:active {
-    background: var(--bright);
+  background: var(--bright);
 }
 
 .card {
-
   border: solid 1px black;
   background-color: var(--dark);
   padding: 15px;
@@ -340,7 +359,6 @@ footer {
   justify-content: space-between;
   align-items: center;
   max-width: 320px;
-
 }
 .imgCard {
   width: 250px;
@@ -353,7 +371,6 @@ h3 {
   font-size: 1.5rem;
 }
 #wrapper {
-
   display: flex;
   gap: 20px;
   flex-wrap: 1;
@@ -366,7 +383,6 @@ h3 {
   display: flex;
   justify-content: space-between;
   background: var(--dark);
-
 }
 
 #inside {
@@ -496,7 +512,6 @@ h3 {
   #lower {
     flex-direction: column;
   }
-  
 }
 
 @media (max-width: 1224px) {
@@ -524,13 +539,13 @@ h3 {
     display: none;
   }
   #opt1 {
-    color:var(--bright) ;
+    color: var(--bright);
   }
   #opt2 {
-    color:#2ac2f3 ;
+    color: #2ac2f3;
   }
   #opt3 {
-    color:#f3932a ;
+    color: #f3932a;
   }
   #opt4 {
     color: #a42af3;
@@ -538,9 +553,8 @@ h3 {
 }
 
 @media (max-width: 768px) {
-    .londonPhoto {
-        width: 300px;
-        border: 1px solid var(--dark);
-      
-      }
+  .londonPhoto {
+    width: 300px;
+    border: 1px solid var(--dark);
+  }
 }
