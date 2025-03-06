@@ -1,3 +1,4 @@
+/*This is my main color scheme, I will be using var() to use these variables*/
 :root {
   --dark: #2b2d42;
   --gray: #8d99ae;
@@ -12,10 +13,12 @@ body {
   margin: 0;
   overflow-x: hidden;
   flex-direction: column;
+  /* this is here to make go back to top button, a nice look for the user */
   scroll-behavior: smooth;
 }
 
 #title {
+    /*Raleway will be my main and only font, just different weights will be used*/
   font-family: "Raleway", serif;
   color: var(--white);
 }
@@ -26,6 +29,7 @@ body {
 }
 
 #container {
+    /*Priority to flex over grid on this project*/
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -33,7 +37,8 @@ body {
   align-items: center;
 }
 
-#titleLink {
+.titleLink {
+    /* Title button will be a link to Homepage, I just dont want an underline on the text. Cursor will still be a pointer to indicate however.*/
   text-decoration: none;
 }
 
@@ -47,13 +52,10 @@ body {
   transition: 300ms ease;
 }
 
-.footbtn:hover {
-  text-decoration: underline;
-}
-
 #footerButtons {
   display: flex;
   flex-direction: column;
+  /* Apply proper spacing */
   gap: 10px;
   margin-left: 25px;
 }
@@ -65,6 +67,8 @@ body {
   width: 50%;
 }
 
+/* Tried my hand at a universal style, I like doing this stuff in React, didn't really work out */
+/* as effectively as usual but still alright */
 #flex {
   display: flex;
   gap: 10px;
@@ -79,7 +83,7 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-
+/* the picture of the uk flag logo */
 #unionJack {
   height: 40px;
 }
@@ -96,6 +100,7 @@ nav {
 }
 
 li {
+    /* Inline is used here as I wanted my List items to be displayed in a row, not in a column */
   display: inline;
 }
 .navLink {
@@ -110,6 +115,7 @@ li {
 }
 
 #mobileButton {
+/* Displays none by default to only show on mobile screens */
   display: none;
 }
 
@@ -160,6 +166,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 dt {
@@ -185,9 +192,16 @@ span {
   flex-direction: column;
 }
 
-#londonPhoto {
-  width: 80%;
+.londonPhoto {
+  width: 500px;
   border: 1px solid var(--dark);
+ object-fit: cover;
+}
+
+.planeImg {
+    width: 500px;
+    border: 1px solid var(--dark);
+   object-fit: cover;
 }
 
 .connector {
@@ -262,7 +276,7 @@ footer {
   align-items: center;
 }
 
-#bigben {
+.bigben {
   width: 30%;
 }
 
@@ -300,8 +314,20 @@ footer {
     top: 0;
     position: absolute;
     right: 0;
+    cursor: pointer;
 }
 
+/* CSS for carousel buttons */
+.carousel {
+    background: #FFF;
+    border: 1px solid;
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+}
+.carousel:active {
+    background: var(--bright);
+}
 
 .card {
 
@@ -335,6 +361,7 @@ h3 {
 }
 #mapContainer {
   width: 100%;
+  height: 100%;
   border: 1px solid black;
   display: flex;
   justify-content: space-between;
@@ -409,12 +436,15 @@ h3 {
   grid-area: row3;
 }
 
-@media (max-width: 1022px) {
+@media (max-width: 1690px) {
   #links {
     display: none;
   }
   #mobileButton {
     display: block;
+  }
+  .planeImg {
+    width: 300px;
   }
   /* #flex {
         flex-direction: column;
@@ -466,6 +496,7 @@ h3 {
   #lower {
     flex-direction: column;
   }
+  
 }
 
 @media (max-width: 1224px) {
@@ -492,4 +523,24 @@ h3 {
   #right {
     display: none;
   }
+  #opt1 {
+    color:var(--bright) ;
+  }
+  #opt2 {
+    color:#2ac2f3 ;
+  }
+  #opt3 {
+    color:#f3932a ;
+  }
+  #opt4 {
+    color: #a42af3;
+  }
+}
+
+@media (max-width: 768px) {
+    .londonPhoto {
+        width: 300px;
+        border: 1px solid var(--dark);
+      
+      }
 }
