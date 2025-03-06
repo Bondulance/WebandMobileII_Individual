@@ -273,6 +273,36 @@ footer {
   text-align: center;
 }
 
+/*This is my css for the hamburger menu*/
+#hamburgerMenu {
+    position: absolute;
+    z-index: 100;
+    background: var(--dark);
+    border: 1px solid var(--white);
+    display: none;
+    right: 0;
+    
+}
+#hamburgerMenu > ul {
+    display: flex;
+    flex-direction: column;
+}
+#hamburgerMenu > ul > li {
+    padding-top: 10px;
+}
+
+#close {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 600;
+    top: 0;
+    position: absolute;
+    right: 0;
+}
+
+
 .card {
 
   border: solid 1px black;
