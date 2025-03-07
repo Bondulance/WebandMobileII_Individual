@@ -22,11 +22,15 @@ x.addEventListener("click", function() {
     menu.style.display = "none";
 });
 
-
+// takes in the click from btn1 and activates listener
+// this is the same for the other three buttons
 btn1.addEventListener("click", function() {
     console.log("btn1 clicked: image displayed is Shard");
+    // console log to ensure only btn1 is clicked and activated
+    // gets the image path from the html tag stored in the data attribute
     const value = btn1.dataset.img;
     console.log(value);
+    // passes it to helper function as a param
     changeCarousel(value);
 });
 
@@ -44,6 +48,8 @@ btn3.addEventListener("click", function() {
     changeCarousel(value);
 });
 
+// helper function, this takes the path from the derived data-img set as a param
+// and changes the main Image of the carousel to that path
 function changeCarousel(path) {
     imageSpace.src = path;
     console.log("Image changed");
