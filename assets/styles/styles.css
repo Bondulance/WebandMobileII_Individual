@@ -59,7 +59,7 @@ body {
   gap: 10px;
   margin-left: 25px;
 }
-
+/* split my footer into two sections, this being the right half */
 #footerRight {
   display: flex;
   gap: 20px;
@@ -68,7 +68,7 @@ body {
 }
 
 /* Tried my hand at a universal style, I like doing this stuff in React, didn't really work out */
-/* as effectively as usual but still alright */
+/* as effectively as usual but still worked alright */
 #flex {
   display: flex;
   gap: 10px;
@@ -132,6 +132,7 @@ dd {
 }
 
 .topLevel {
+  /* this was used to make my top level nav elements look bolder than the bottom nav elements*/
   font-weight: bold;
   float: left;
   color: var(--white);
@@ -144,6 +145,7 @@ dd {
 
 
 #hamburger {
+  /*got rid of background on the button */
   width: 50px;
   background: none;
   border: none;
@@ -211,6 +213,7 @@ span {
   align-items: center;
 }
 
+/* Used to create different layouts for different pages*/
 #splitContainerAlt {
   display: flex;
   justify-content: space-between;
@@ -283,6 +286,7 @@ footer {
   height: 100px;
 }
 #unionJackfooter {
+  /*Image sizing*/
   height: 30px;
 }
 
@@ -339,6 +343,7 @@ footer {
 }
 
 #close {
+  /* This is for the X on the hamburger menu to close it*/
   background: none;
   border: none;
   color: var(--white);
@@ -349,6 +354,7 @@ footer {
   right: 0;
   cursor: pointer;
 }
+
 
 /* CSS for carousel buttons */
 .carousel {
@@ -374,6 +380,7 @@ footer {
   max-width: 320px;
 }
 .imgCard {
+  /* Card used to help navigate through lower levels, as well as get back to top level */
   width: 250px;
   padding: 10px;
 }
@@ -424,6 +431,7 @@ h4 {
   box-shadow: 3px 3px 3px 0px black;
 }
 
+/* Matches the colored pins on the map, used to show which one is which to the user */
 #opt1:hover {
   color: var(--bright);
 }
@@ -440,36 +448,8 @@ h4 {
   color: #a42af3;
 }
 
-#HISTORY {
-  grid-area: row1;
-}
-#LOCATION {
-  grid-area: row1;
-}
-#CULTURE {
-  grid-area: row1;
-}
-#ACTIVITIES {
-  grid-area: row1;
-}
-#TRAVELING {
-  grid-area: row1;
-}
-#WAR {
-  grid-area: row2;
-}
-#ARCHITECTURE {
-  grid-area: row2;
-}
-#FOOD {
-  grid-area: row2;
-}
-#MONUMENTS {
-  grid-area: row3;
-}
-#NATURE {
-  grid-area: row3;
-}
+
+/* All of my media queries start and end past this point */
 
 @media (max-width: 1690px) {
   #links {
@@ -535,6 +515,7 @@ h4 {
 
 @media (max-width: 1224px) {
   #splitContainer {
+    /* For responsiveness */
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -557,6 +538,8 @@ h4 {
   #right {
     display: none;
   }
+  /* This was implemented as, how they are usually hover, phone and tablet do not hover
+  meaning they would not kno which element was which on the map*/
   #opt1 {
     color: var(--bright);
   }
@@ -572,6 +555,7 @@ h4 {
 }
 
 @media (max-width: 768px) {
+  /* Resized many of the larger photos with this class and media query to get responsiveness*/
   .londonPhoto {
     width: 300px;
     border: 1px solid var(--dark);
