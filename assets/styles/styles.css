@@ -131,9 +131,15 @@ dd {
   border: none;
 }
 
-#topLevel {
+.topLevel {
   font-weight: bold;
   float: left;
+  color: var(--white);
+  font-family: "Raleway", serif;
+  font-size: 1.15rem;
+  transition: 300ms ease;
+  padding-right: 40px;
+  text-align: left;
 }
 
 
